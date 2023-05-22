@@ -10,5 +10,7 @@ def create_app():
 
 app = create_app()
 
+# read all views from starter app
+import DivarStarter.views
 
 
