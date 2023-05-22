@@ -5,42 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94bf28f7-851f-4052-a0e2-71d61a13e931" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Divar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Divar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DivarConfig/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DivarConfig/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DivarCore/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/extenstion.py" beforeDir="false" afterPath="$PROJECT_DIR$/DivarCore/extenstion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/CSS/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/CSS/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/fonts/Iranian Sans.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/fonts/sans.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/fonts/sans1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/image/index.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/main-card.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/modal-city.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/sidebar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/JS/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/CSS/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/images/index.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/images/slide1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/images/slide2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/images/slide3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/CSS/bootstrap.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/CSS/fonts/sans.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/CSS/style-public.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/JS/scripts-public.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Divar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DivarConfig/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DivarConfig/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DivarCore/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DivarCore/extenstion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/01.divar-First-index/CSS/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/01.divar-First-index/CSS/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/01.divar-First-index/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/01.divar-First-index/fonts/Iranian Sans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/01.divar-First-index/fonts/sans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/01.divar-First-index/fonts/sans1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/01.divar-First-index/image/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/01.divar-First-index/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/02.divar-home-index/CSS/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/02.divar-home-index/CSS/main-card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/02.divar-home-index/CSS/modal-city.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/02.divar-home-index/CSS/sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/02.divar-home-index/CSS/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/02.divar-home-index/JS/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/02.divar-home-index/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/03.divar-Customer-index/CSS/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/03.divar-Customer-index/images/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/03.divar-Customer-index/images/slide1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/03.divar-Customer-index/images/slide2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/03.divar-Customer-index/images/slide3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/03.divar-Customer-index/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/CSS/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/CSS/fonts/sans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/CSS/style-public.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/JS/scripts-public.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +104,7 @@
       <updated>1684258975789</updated>
       <workItem from="1684259037704" duration="3064000" />
       <workItem from="1684775421683" duration="269000" />
+      <workItem from="1684775871628" duration="24000" />
     </task>
     <servers />
   </component>
