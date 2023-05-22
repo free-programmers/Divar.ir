@@ -1,0 +1,11 @@
+.link-ind-page {
+    text-decoration: none;
+    color: inherit;
+}
+.link-ind-page:hover {
+    color: inherit;
+}
+.img-card {
+    width: 120px;
+    height: 120px;
+}

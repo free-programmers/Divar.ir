@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94bf28f7-851f-4052-a0e2-71d61a13e931" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Divar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Divar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DivarConfig/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DivarConfig/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DivarCore/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/extenstion.py" beforeDir="false" afterPath="$PROJECT_DIR$/DivarCore/extenstion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/CSS/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/CSS/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/fonts/Iranian Sans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/fonts/sans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/fonts/sans1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/image/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/01.divar-First-index/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/main-card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/modal-city.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/CSS/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/JS/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/02.divar-home-index/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/CSS/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/images/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/images/slide1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/images/slide2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/images/slide3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/03.divar-Customer-index/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/CSS/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/CSS/fonts/sans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/CSS/style-public.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/JS/scripts-public.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PswDKOKctp1IUDcDGTQcS6yLqB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Divar" type="Python.FlaskServer">
+      <option name="flaskEnv" />
+      <module name="Divar" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\alisharify\Documents\GitHub\Divar.ir\Divar\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94bf28f7-851f-4052-a0e2-71d61a13e931" name="Changes" comment="" />
+      <created>1684258975789</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684258975789</updated>
+      <workItem from="1684259037704" duration="3064000" />
+      <workItem from="1684775421683" duration="269000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Divar$Divar.coverage" NAME="Divar Coverage Results" MODIFIED="1684775560734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>

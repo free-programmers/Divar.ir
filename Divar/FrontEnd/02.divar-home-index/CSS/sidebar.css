@@ -1,0 +1,29 @@
+/* right side bar index home */
+.text-black-hover:hover{
+    color: #000 !important;
+}
+
+/* find transition */
+
+
+.input-focus:focus-within{
+    border: 2px solid var(--brand-color) !important;
+    box-shadow: none !important;
+}
+aside.sidebar {
+    top: 90px;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+/* right side bar index home */
+
+
+/* responsive mini side bar bottom */
+
+
+.bg-gray-hover:hover {
+    background-color: var(--color-gray) !important;
+}
+/* responsive mini side bar bottom */

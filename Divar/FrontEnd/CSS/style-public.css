@@ -1,0 +1,150 @@
+@font-face {
+    font-family: sana_font;
+    src: url('./fonts/sans.ttf');
+}
+
+
+body{
+    font-family: sana_font !important;
+}    
+
+
+:root{
+    --text-muted-hover:#c4c8cc;
+    --brand-color:#a62626;
+    --brand-color-hover:#c93c3c;
+    --color-gray: #e2e2e29a;
+    --color-gray-lighter: #e8e8e89a;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+.fs-6{
+    font-size:0.6rem;
+}
+.fs-7{
+    font-size:0.7rem;
+}
+.fs-8{
+    font-size:0.8rem;
+}
+.fs-9{
+    font-size:0.9rem;
+}
+.fs-10{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.fs-11{
+    font-size: 1.1rem ;
+}
+.fs-12{
+    font-size: 1.2rem;
+}
+.fs-13{
+    font-size: 1.4rem;
+}
+
+.fs-info{
+    font-size: .95rem;
+}
+
+/* utils */
+
+
+.fs-8{
+    font-size: .9rem;
+}
+.fs-10{
+    font-size: .7rem;
+}
+.fs-11 {
+    font-size: .8rem;
+}
+
+/* utils */
+
+.transition-bgcolor-1s {
+    transition: background-color 1s !important;
+}
+
+.text-black {
+    color: black !important;
+}
+
+
+.hover-light:hover {
+    background-color:rgb(225, 221, 221) ;
+}
+
+
+
+.bg-brand-color{
+    background-color: var(--brand-color);
+}
+.bg-brand-color{
+    background-color: var(--brand-color);
+}
+.bg-color-brand {
+    background-color: var(--brand-color) !important;
+}
+.bg-color-brand {
+    background-color: var(--brand-color) !important;
+}
+
+
+
+
+
+.text-color-brand {
+    color: var(--brand-color) !important;
+}
+.text-white{
+    color: white !important;
+}
+.text-black-hover:hover{
+    color: #000 !important;
+}
+.transition-all-1s{
+    transition: all 1s;
+}
+
+
+.text-black-hover:hover{
+    color: #000 !important;
+}
+.text-brand{
+    color: var(--brand-color);
+}
+
+
+.text-color-brand {
+    color: var(--brand-color) !important;
+}
+
+
+
+.btn-brand{
+    background-color:var(--brand-color);
+}
+.btn-outline-brand{
+    border:1px solid var(--brand-color);
+}
+
+
+
+.text-black-hover:hover {
+    color: #000 !important;
+}
+.text-black-muted-cs{
+    color: rgba(0, 0, 0, 0.6) !important;
+}

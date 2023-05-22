@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://kit.fontawesome.com/9acc533df2.js" crossorigin="anonymous"></script>
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="../CSS/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="./CSS/header.css" />
+  <link rel="stylesheet" href="./CSS/main-card.css" />
+  <link rel="stylesheet" href="./CSS/modal-city.css" />
+  <link rel="stylesheet" href="./CSS/sidebar.css" />
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../CSS/style-public.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-react-helmet="true">دیوار کرج: مرجع انواع نیازمندی و آگهی‌های نو و دست دو در شهر کرج</title>
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://s100.divarcdn.com/static/thewall-assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://s100.divarcdn.com/static/thewall-assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://s100.divarcdn.com/static/thewall-assets/favicon-16x16.png">
+  <link rel="mask-icon" href="https://s100.divarcdn.com/static/thewall-assets/safari-pinned-tab.svg" color="#a62626">
+</head>
+
+<body>
+
+
+<!-- START navbar -->
+  <div class="container-fluid shadow-sm fixed-top bg-white pb-sm-3 pb-lg-0 ">
+    <div class="row">
+      <nav class="mx-5 navbar text-center navbar-expand-lg flex-row-reverse">
+        <!-- brand logo -->
+        <a href="" class="d-none d-lg-block navbar-brand ps-5 pe-3 border-end">
+          <img style="width: 50px"
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04LjM4NTUzIDE0LjYxNzNIOC4yODA0M0M3Ljg5NTA2IDE0LjU2NDcgNy42MzIzMiAxNC4xOTY5IDcuNjg0ODcgMTMuODExNUM4LjE1NzgxIDEwLjY5MzYgOC4zMTU0NiA1LjcxODg3IDguMzE1NDYgNS42ODM4NEM4LjM1MDQ5IDUuMjk4NDggOC42NDgyNyA0Ljk4MzE4IDkuMDUxMTUgNS4wMDA3QzkuNDM2NTIgNS4wMTgyMSA5LjczNDMgNS4zMzM1MSA5LjczNDMgNS43MTg4N0M5LjczNDMgNS45MjkwNyA5LjU1OTEzIDEwLjgxNjIgOS4wODYxOSAxNC4wMjE3QzkuMDMzNjQgMTQuMzcyIDguNzM1ODYgMTQuNjE3MyA4LjM4NTUzIDE0LjYxNzNaTTE4LjQyMjUgMTUuOTEzNUMxOC4xMjQ3IDE1LjkxMzUgMTcuODQ0NCAxNS43MjA4IDE3Ljc1NjkgMTUuNDIzQzE3LjYzNDIgMTUuMDU1MiAxNy44NDQ0IDE0LjY1MjMgMTguMjEyMyAxNC41NDcyQzIxLjUyMjkgMTMuNDk2MiAyMS41NzU0IDEyLjY5MDQgMjEuNTkzIDEyLjI1MjVDMjEuNjI4IDExLjU2OTQgMjEuMTAyNSAxMC42OTM2IDIwLjg5MjMgMTAuMzk1OEMyMC42NjQ2IDEwLjA4MDUgMjAuNzM0NyA5LjY0MjU3IDIxLjA1IDkuNDE0ODVDMjEuMzY1MiA5LjE4NzE0IDIxLjgwMzIgOS4yNTcyIDIyLjAzMDkgOS41NzI1QzIyLjEzNiA5LjcxMjYzIDIzLjA4MTkgMTEuMDI2NCAyMi45OTQzIDEyLjM0MDFDMjIuOTA2NyAxMy45MzQxIDIxLjY4MDUgMTQuOTE1IDE4LjYzMjcgMTUuODk2QzE4LjU5NzYgMTUuODk2IDE4LjU2MjYgMTUuOTAwMyAxOC41Mjc2IDE1LjkwNDdDMTguNDkyNSAxNS45MDkxIDE4LjQ1NzUgMTUuOTEzNSAxOC40MjI1IDE1LjkxMzVaTTguOTExMDIgMTguMzgzM0M4LjcwMDgyIDE4LjM4MzMgOC40OTA2MyAxOC4yOTU3IDguMzY4MDEgMTguMTIwNkM4LjEyMjc4IDE3LjgyMjggOC4xNzUzMyAxNy4zNjczIDguNDkwNjMgMTcuMTM5NkM5LjkyNjk4IDE2LjAwMTEgMTAuODkwNCAxNC45ODUxIDExLjUyMSAxNC4wOTE4QzExLjE3MDYgMTMuOTE2NiAxMC44MDI4IDEzLjY1MzggMTAuNjEwMSAxMy4yMTU5QzEwLjQzNSAxMi44MTMxIDEwLjMyOTkgMTIuMTQ3NCAxMC45NDI5IDExLjI1NDFDMTEuODE4OCA5Ljk1Nzg2IDEyLjY5NDYgOS42NjAwOCAxMy4wMjc0IDkuNTkwMDJDMTMuNDgyOCA5LjUwMjQ0IDEzLjkyMDcgOS43NjUxOCAxNC4wNDM0IDEwLjIwMzFDMTQuMTMwOSAxMC41MTg0IDE0LjM0MTEgMTEuNTE2OCAxMy43MTA1IDEzLjA0MDhDMTQuNTUxMyAxMy4wMjMzIDE1LjIxNyAxMi43OTU1IDE1LjcyNDkgMTIuMzc1MUMxNi43MDU5IDExLjU4NjkgMTYuNzU4NCAxMC4yNTU2IDE2Ljc1ODQgMTAuMjM4MUMxNi43NzU5IDkuODUyNzcgMTcuMDkxMiA5LjU1NDk4IDE3LjQ3NjYgOS41NTQ5OEMxNy44NjE5IDkuNTcyNSAxOC4xNTk3IDkuODg3OCAxOC4xNTk3IDEwLjI3MzJDMTguMTU5NyAxMC4zNDMyIDE4LjA4OTcgMTIuMjE3NSAxNi42MzU4IDEzLjQ0MzZDMTUuNzI0OSAxNC4yMTQ0IDE0LjQ4MTMgMTQuNTQ3MiAxMi45NzQ4IDE0LjQyNDZDMTIuMjU2NyAxNS41MjgxIDExLjExODEgMTYuODI0MyA5LjM0ODkzIDE4LjIyNTZDOS4yMDg4IDE4LjMzMDcgOS4wNjg2NyAxOC4zODMzIDguOTExMDIgMTguMzgzM1pNMTIuNzEyMSAxMS4zMDY2QzEyLjUxOTQgMTEuNDY0MyAxMi4zMDkyIDExLjY5MiAxMi4wODE1IDEyLjA0MjNDMTEuODUzOCAxMi4zOTI3IDExLjgzNjMgMTIuNTg1MyAxMS44NTM4IDEyLjYzNzlDMTEuODg4OCAxMi43MjU1IDEyLjA2NCAxMi44MTMxIDEyLjIzOTIgMTIuODgzMUMxMi41NzIgMTIuMjE3NSAxMi42NzcxIDExLjY5MiAxMi43MTIxIDExLjMwNjZaTTEyLjg4NzMgMTYuMjI4OEMxMi45MDQ4IDE2LjYxNDEgMTMuMjIwMSAxNi45MTE5IDEzLjU4NzkgMTYuOTExOUgxMy42MjNDMTMuNjc1NSAxNi45MTE5IDE0Ljg0OTEgMTYuODc2OSAxNi41MzA3IDE2LjQ5MTVDMTYuOTE2MSAxNi40MDM5IDE3LjE2MTMgMTYuMDM2MSAxNy4wNzM3IDE1LjY1MDdDMTYuOTg2MSAxNS4yNjU0IDE2LjYxODMgMTUuMDIwMSAxNi4yMzI5IDE1LjEwNzdDMTQuNjczOSAxNS40NDA1IDEzLjU3MDQgMTUuNDkzMSAxMy41NTI5IDE1LjQ5MzFDMTMuMTY3NSAxNS41MTA2IDEyLjg2OTcgMTUuODQzNCAxMi44ODczIDE2LjIyODhaTTEuMTMzNyAxOC4xMDNDMS4yNTYzMSAxOC4yNzgyIDEuNDg0MDMgMTguMzgzMyAxLjY5NDIzIDE4LjM4MzNDMS44MzQzNiAxOC4zODMzIDEuOTc0NDkgMTguMzQ4MyAyLjExNDYyIDE4LjI2MDdDNi41NjM4MSAxNS4wMjAxIDYuNzM4OTggMTAuNzgxMSA2LjczODk4IDEwLjYwNkM2LjczODk4IDEwLjIyMDYgNi40NDEyIDkuOTA1MzEgNi4wNTU4MyA5Ljg4NzhDNS42NzA0NyA5Ljg3MDI4IDUuMzU1MTcgMTAuMTg1NiA1LjMzNzY2IDEwLjU3MDlDNS4zMzc2NiAxMC43MTExIDUuMTYyNDkgMTQuMzAyIDEuMjkxMzUgMTcuMTIyMUMwLjk3NjA0OSAxNy4zNDk4IDAuOTA1OTgzIDE3Ljc4NzcgMS4xMzM3IDE4LjEwM1oiIGZpbGw9IiNBNjI2MjYiLz4KPC9zdmc+Cg=="
+            alt="divar logo" />
+        </a>
+        <!-- brand logo -->
+
+        <div class="navbar-collapse collapse fs-8" id="mynavbar">
+          <ul class="navbar-nav flex-row-reverse w-100">
+
+            <li class="rounded nav-item mx-2">
+              <a href="" class="nav-link text-muted" data-bs-toggle="modal" data-bs-target="#selectAreaModal">
+                <span>کرج</span>
+                <i class="bi bi-geo-alt"></i>
+              </a>
+            </li>
+            <li class="cursor-pointer rounded nav-item mx-2">
+              <a data-bs-toggle="modal" data-bs-target="#opencategories"
+                class="text-muted fs-8 nav-link dropdown-toggle position-relative">
+                <span>دسته ها</span>
+              </a>
+
+            </li>
+
+            <!-- form search in navbar -->
+            <form action="" class="form-inline w-25 bg-light-owen-lighter rounded">
+              <div class="input-group ">
+                <input dir="rtl" class="border-0 form-control p-0 bg-light-owen-lighter" type="text"  placeholder="جستجو در آگهی ها">
+                <button class="border-0 input-group-text btn bg-light-owen-lighter">
+                  <i class=" bi bi-search" id=""></i>
+                </button>
+              </div>
+            </form>
+            <!-- form search in navbar  -->
+
+
+            <!-- left side menu in navbar -->
+            <li class="rounded nav-item ms-auto dropdown">
+              <div class="">
+                <a href="" class="nav-link text-muted " data-bs-toggle="dropdown">
+                  <span>دیوار من</span>
+                  <i class="bi bi-person"></i>
+                </a>
+                <!-- دیوار من dropdown -->
+                <div class="dropdown-menu text-muted fs-11  ">
+                  <a href="" class="dropdown-item px-4 text-black-muted-cs border-bottom transition-bgcolor-1s ">
+                    <div class="fs-11 ">
+                      <div class="px-1 py-2">
+                        <span>کاربر دیوار</span>
+                        <i class="bi bi-person"></i>
+                      </div>
+                      <div class="p-1 ">
+                        <span class="text-muted-light">تلفن</span>
+                        <span class="text-muted-light">09375465654</span>
+                      </div>
+                    </div>
+                  </a>
+                  
+                <a href="" data-bs-toggle="modal" data-bs-target="#login-user-modal"
+                      class=" dropdown-item px-5 text-black-muted-cs border-bottom py-3 transition-bgcolor-1s">
+                        <span class="fs-7">ورود</span>
+                      <i class="bi bi-box-arrow-right"></i>
+                </a>
+                  <a href="" class=" dropdown-item px-5 text-black-muted-cs border-bottom py-3 transition-bgcolor-1s ">
+                    <span class="fs-7">آگهی های من</span>
+                    <i class=" fs-8 bi bi-book pe-1"></i>
+                  </a>
+                  <a href="" class=" dropdown-item px-5 text-black-muted-cs py-3 border-bottom transition-bgcolor-1s ">
+                    <span class="fs-7">نشان شده ها</span>
+                    <i class="bi bi-bookmark"></i>
+                  </a>
+                  <a href="" class=" dropdown-item px-5 text-black-muted-cs py-3 border-bottom transition-bgcolor-1s ">
+                    <span class="fs-7">یادداشت ها</span>
+                    <i class="bi bi-card-list"></i>
+                  </a>
+                  <a href="" class=" dropdown-item px-5 text-black-muted-cs py-3 border-bottom transition-bgcolor-1s ">
+                    <span class="fs-7">بازدید های اخیر</span>
+                    <i class="bi bi-clock-history"></i>
+                  </a>
+                  <a href="" class=" dropdown-item px-5 text-black-muted-cs py-3 border-bottom transition-bgcolor-1s ">
+                    <span class="fs-7">دیوار برای کسب و کار ها</span>
+                    <i class="bi bi-shop-window"></i>
+                  </a>
+                  <a href="" class=" dropdown-item px-5 text-black-muted-cs py-3 transition-bgcolor-1s ">
+                    <span class="fs-7">خروج</span>
+                    <i class="bi bi-box-arrow-right"></i>
+                  </a>
+
+                </div>
+                <!-- دیوار من dropdown -->
+              </div>
+            </li>
+
+
+            <li class="rounded nav-item mx-2">
+              <div class="hover">
+                <a href="" class="nav-link text-muted">
+                  <span>چت</span>
+                  <i class="bi bi-chat mb-3"></i>
+                </a>
+              </div>
+            </li>
+            <li class="rounded nav-item mx-2">
+              <a href="" class="nav-link text-muted">
+                <span>پشتیبانی</span>
+              </a>
+            <li class="rounded nav-item mx-2">
+            </li>
+            <a href="" class="nav-link text-white border add-register-btn-header rounded">
+              <span>ثبت آگهی</span>
+            </a>
+            </li>
+            <!-- left side menu in navbar -->
+          </ul>
+        </div>
+
+
+      </nav>
+    </div>
+
+    <!-- responsive header search bar -->
+    <div class="navbar-nav d-md-block d-lg-none">
+      <form action="" class="form-inline border p-0">
+        <div class="input-group">
+          <span class="input-group-text border-0 bg-white border-start ">کرج</span>
+          <input type="text" name="" id="" class="border-0 form-control">
+          <span class="input-group-text border-0 border-start bg-white">
+            <i class="bi bi-search"></i>
+          </span>
+        </div>
+      </form>
+    </div>
+    <!-- responsive header search bar -->
+
+  </div>
+<!-- END of navbar -->
+
+
+<div class="container-fluid mt-5 pt-5" dir="rtl">
+    <div class="row">
+
+<!-- START SIDEBAR mini sidebar down -->
+      <aside class="col-md-3 position-fixed bottom-0 sidebar ">
+        <div class="position-static h-auto">
+          <span class="h6">دسته‌ها</span>
+          <ul class="list-group border-bottom pb-3">
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-building pe-3"></i>
+                املاک
+              </a>
+            </li>
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-car-front-fill pe-3"></i>
+                وسایل نقلیه
+              </a>
+            </li>
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-phone pe-3"></i>
+                کالای دیجیتال
+              </a>
+            </li>
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-lamp pe-3"></i>
+                خانه و آشپزخانه
+              </a>
+            </li>
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-brush pe-3"></i>
+                خدمات
+              </a>
+            </li>
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-watch pe-3"></i>
+                وسایل شخصی
+              </a>
+            </li>
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-dice-6 pe-3"></i>
+                سرگرمی و فراغت
+              </a>
+            </li>
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-people pe-3"></i>
+                اجتماعی
+              </a>
+            </li>
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-door-closed pe-3"></i>
+                تجهیزات و صنعتی
+              </a>
+            </li>
+            <li class="list-group-item border-0">
+              <a class="d-flex flex-row text-muted fs-8 text-black-hover" href="#">
+                <i class="bi bi-briefcase pe-3"></i>
+                استخدام و کاریابی
+              </a>
+            </li>
+          </ul>
+          <div class="border-bottom d-flex flex-column">
+            <div class="d-flex flex-column">
+              <a class="text-muted fs-8 w-100 p-3 text-black-hover" onclick="sidebarButtons_animation('selectAreaIcon')"
+                data-bs-toggle="collapse" data-bs-target="#selectArea" href="#">
+                <label id="selectAreaIcon" class="transition-all-1s"><i
+                    class="bi bi-caret-down pe-3"></i></label>محل
+              </a>
+
+              <div id="selectArea" class="collapse">
+                <div class="d-flex flex-row-reverse align-items-center">
+                  <input type="text" class="form-control text-start fs-10 mb-3 mt-2 p-2 pe-5 input-focus"
+                    placeholder="تعیین محل">
+                  <i class="bi bi-caret-left position-absolute text-muted pe-2 p-b-2 fs-5"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-bottom d-flex flex-column">
+            <div class="d-flex flex-row">
+              <a class=" text-muted fs-8 w-100 p-3 text-black-hover"
+                onclick="sidebarButtons_animation('selectAmountIcon')" data-bs-toggle="collapse"
+                data-bs-target="#selectAmount" href="#">
+                <label id="selectAmountIcon" class="transition-all-1s"><i
+                    class="bi bi-caret-down pe-3"></i></label>قیمت
+              </a>
+            </div>
+
+            <div id="selectAmount" class="collapse">
+              <div class="d-flex flex-row-reverse align-items-center">
+                <input type="text" class="form-control text-start fs-10 mb-1 mt-2 p-2 pe-5 input-focus"
+                  placeholder="مثلا 70000000">
+                <h6 class="text-muted fs-10 pe-3">حداقل</h6>
+                <h6 class="position-absolute text-muted pe-2 p-b-2 fs-10">تومان</h6>
+              </div>
+              <div class="d-flex flex-row-reverse align-items-center">
+                <input type="text" class="form-control text-start fs-10 mb-3 mt-2 p-2 pe-5 input-focus"
+                  placeholder="مثلا 70000000">
+                <h6 class="text-muted fs-10 pe-3">حداکثر</h6>
+                <h6 class="position-absolute text-muted pe-2 p-b-2 fs-10">تومان</h6>
+              </div>
+            </div>
+
+          </div>
+          <div class="border-bottom d-flex flex-column">
+            <div class="d-flex flex-row">
+              <a class=" text-muted fs-8 w-100 p-3 text-black-hover"
+                onclick="sidebarButtons_animation('selectCustomerStateIcon')" href="#" data-bs-toggle="collapse"
+                data-bs-target="#selectCustomerState">
+                <label id="selectCustomerStateIcon" class="transition-all-1s"><i
+                    class="bi bi-caret-down pe-3"></i></label>وضعیت آگهی
+              </a>
+            </div>
+
+            <div class="collapse" id="selectCustomerState">
+              <div class="d-flex flex-column">
+                <div class="d-flex flex-row p-2 justify-content-between">
+                  <h6 class="fs-10 text-black">فقط عکس‌دار</h6>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input fs-5 shadow-none" onclick="switchToggle_changeBgColor(this.id)"
+                      type="checkbox" role="switch" id="toggle-justPic">
+                  </div>
+                </div>
+                <div class="d-flex flex-row p-2 justify-content-between">
+                  <h6 class="fs-10 text-black">فقط فوری‌ها</h6>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input fs-5 shadow-none" onclick="switchToggle_changeBgColor(this.id)"
+                      type="checkbox" role="switch" id="toggle-justQuick">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div>
+            <div class="row text-right pt-3">
+              <a class="col-md-4 fs-11 px-3 py-2  text-muted text-black-hover" href="#">درباره دیوار</a>
+              <a class="col-md-4 fs-11 px-3 py-2  text-muted text-black-hover" href="#">دریافت برنامه</a>
+              <a class="col-md-4 fs-11 px-3 py-2  text-muted text-black-hover" href="#">بلاگ دیوار</a>
+              <a class="col-md-4 fs-11 px-3 py-2  text-muted text-black-hover" href="#">پشتیبانی</a>
+            </div>
+          </div>
+          <div class="d-flex flex-row-reverse justify-content-center mt-3">
+            <a class="col-md-2 text-muted text-black-hover text-center w-auto pe-4" href="#"><i
+                class="bi bi-youtube"></i></a>
+            <a class="col-md-2 text-muted text-black-hover text-center w-auto pe-4" href="#"><i
+                class="bi bi-linkedin"></i></a>
+            <a class="col-md-2 text-muted text-black-hover text-center w-auto pe-4" href="#"><i
+                class="bi bi-instagram"></i></a>
+            <a class="col-md-2 text-muted text-black-hover text-center w-auto pe-4" href="#"><i
+                class="bi bi-twitter"></i></a>
+          </div>
+          <div class="d-flex flex-row justify-content-center mt-4">
+            <a class="w-auto text-center" href="#">
+              <img class="pe-3" width="80px"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnI_nD98BLjMzlF0Ppsctz-8qw2MAxHNOpY4Dj6kWaDOoavUSpm4d0IERdlhbjTxKvPA0&usqp=CAU"
+                alt="">
+            </a>
+            <a class="w-auto text-center" href="#">
+              <img class="pe-3" width="80px" src="https://s100.divarcdn.com/statics/2022/08/ecunion-logo.3ed4f870.png"
+                alt="">
+            </a>
+            <a class="w-auto text-center" href="#">
+              <img class="pe-3" width="80px" src="https://paydarweb.net/uploads/pages/1d2ab0.png" alt="">
+            </a>
+          </div>
+        </div>
+      </aside>
+      <aside class="d-none col-12 mini-sidebar position-fixed bottom-0 start-0 border-top bg-white">
+        <div class="d-flex align-items-center justify-content-between">
+
+          <a class="d-flex align-items-center text-color-brand p-3 fs-10 miniSidebar-button btn-res-bottom" href="#"><span>دیوار آگهی‌ها</span></a>
+          <!-- open categorie modal -->
+          <button data-bs-target="#opencategories" data-bs-toggle="modal"
+          class="d-flex align-items-center bg-transparent border-0 p-3 text-muted bg-gray-hover text-black-hover miniSidebar-button btn-res-bottom "><i
+          class="bi bi-list-ul pe-3 icon-btn-res-bottom "></i><span>دسته‌ها</span>
+        </button>
+        <!-- open categorie modal -->
+          
+          <button
+            class="d-flex align-items-center bg-transparent border-0 p-3 text-muted bg-gray-hover text-black-hover miniSidebar-button btn-res-bottom"><i
+              class="bi bi-plus-circle-fill  pe-3 icon-btn-res-bottom ">
+            </i><span>ثبت آگهی</span>
+          </button>
+          
+          <a class="  d-flex align-items-center text-muted h-100 p-3 text-muted bg-gray-hover text-black-hover miniSidebar-button btn-res-bottom"
+            href="#"><i class="bi bi-chat-fill pe-3 icon-btn-res-bottom "></i><span>چت</span>
+          </a>
+
+          <a class="  d-flex align-items-center text-muted h-100 p-3 text-muted bg-gray-hover text-black-hover miniSidebar-button btn-res-bottom"
+            href="#"><i class="bi bi-person-fill pe-3  icon-btn-res-bottom "></i><span>دیوار من</span>
+          </a>
+        
+          </div>
+      </aside>
+<!-- END SIDEBAR mini sidebar down -->
+
+<!-- start MAIN CARD -->
+      <div class="col-md-12 col-lg-9 ms-auto">
+        <div class="row" dir="ltr">
+          <!-- card start -->
+
+          <div class="col-md-6 col-lg-6 p-2">
+            <div class="bg-light shadow-sm rounded border p-2">
+              <a class="link-ind-page d-flex justify-content-between" href="">
+                <div>
+                  <img class="img-card" src="https://s101.divarcdn.com/static/pictures/1662608653/wYZQmt9o.jpg" alt="">
+                </div>
+                <div class="text-start d-flex flex-column justify-content-around ">
+                  <h4 class="fs-8 p-2 text-black costumer-title">اجاق گاز مبله فردارچهارشعله خیلی تمیز</h4>
+                  <div>
+                    <span class="text-muted fs-8 fs-10 costumer-info-caption">در حد نو</span>
+                    <br>
+                    <span class="text-muted fs-8 fs-10 costumer-info-caption">850000تومان</span>
+                    <br>
+                    <span class="text-muted fs-8 fs-10 costumer-info-caption">لحاظی پیش درکرج</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-6 p-2">
+            <div class="bg-light shadow-sm rounded border p-2 ">
+              <a class="link-ind-page d-flex justify-content-between" href="">
+                <div>
+                  <img class="img-card" src="https://s101.divarcdn.com/static/pictures/1662608653/wYZQmt9o.jpg" alt="">
+                </div>
+                <div class="text-start d-flex flex-column justify-content-around">
+                  <h4 class="fs-8 pt-2 text-black costumer-title">اجاق گاز مبله فردارچهارشعله خیلی تمیز</h4>
+                  <div>
+                    <span class="text-muted fs-8 fs-10 costumer-info-caption">در حد نو</span>
+                    <br>
+                    <span class="text-muted fs-8 fs-10 costumer-info-caption">850000تومان</span>
+                    <br>
+                    <span class="text-muted fs-8 fs-10 costumer-info-caption">لحاظی پیش درکرج</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          <!-- card start -->
+        </div>
+      </div>
+<!-- END MAIN CARD -->
+    </div>
+</div>
+
+
+
+<!-- all Modals here modals (For Search) -->
+<!-- The Modal Citys-->
+  <div class="modal fade" id="selectAreaModal" dir="rtl">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header d-flex flex-column border-0 p-4">
+
+          <div class="d-flex w-100 justify-content-between">
+            <h4 class="modal-title fs-5">انتخاب شهر</h4>
+            <button type="button"
+              class="bg-transparent text-danger border-0 bg-danger-hover border-radius-30 pe-3 ps-3 fs-10"
+              onclick="document.querySelector('#city-tag-names').innerHTML ='<h6 class=\'text-muted fs-8 pt-2\'>حداقل یک شهر را انتخاب کنید.</h6>'; unchecked_checkboxes('city-tag-checkbox'); document.querySelector('#btnSelectCities').disabled = true;">حذف
+              همه</button>
+          </div>
+
+          <div class="d-flex w-100 mt-2 p-2 overflow-auto" id="city-tag-names">
+            <h6 class="text-muted fs-8 pt-2">حداقل یک شهر را انتخاب کنید.</h6>
+          </div>
+
+          <div class="form-group position-relative w-100 mt-3 pt-1">
+            <input type="text" class="form-control input-focus border-gray-hover fs-8 ps-5"
+              placeholder="جستجوی در شهرها" />
+            <i class="bi bi-search position-absolute text-muted top-0 m-2 fs-5"></i>
+          </div>
+
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+
+            <div id="sectionShowAreas">
+
+              <!-- Each Area -->
+              <li>
+                <div class="border-dark border-bottom text-muted  d-flex flex-column">
+                  <div class="d-flex">
+                    <a class="text-muted d-flex flex-row-reverse justify-content-between fs-8 w-100 py-3 text-black-hover"
+                      onclick="document.querySelector('#sectionShowAreas').classList.toggle('d-none'); document.querySelector('#sectionShowCities').classList.toggle('d-none');"
+                      id="city_id" href="#">
+                      <label class="transition-all-1s"><i class="bi bi-caret-left pe-3"></i></label>آذربایجان
+                      غربی
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- End Each Area -->
+              <!-- Each Area -->
+              <li>
+                <div class="border-dark border-bottom  text-muted d-flex flex-column">
+                  <div class="d-flex">
+                    <a class="text-muted d-flex flex-row-reverse justify-content-between fs-8 w-100 py-3 text-black-hover"
+                      onclick="document.querySelector('#sectionShowAreas').classList.toggle('d-none'); document.querySelector('#sectionShowCities').classList.toggle('d-none');"
+                      id="city_id" href="#">
+                      <label class="transition-all-1s"><i class="bi bi-caret-left pe-3"></i></label>آذربایجان
+                      غربی
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- End Each Area -->
+              <!-- Each Area -->
+              <li>
+                <div class="border-dark border-bottom text-muted d-flex flex-column">
+                  <div class="d-flex">
+                    <a class="text-muted d-flex flex-row-reverse justify-content-between fs-8 w-100 py-3 text-black-hover"
+                      onclick="document.querySelector('#sectionShowAreas').classList.toggle('d-none'); document.querySelector('#sectionShowCities').classList.toggle('d-none');"
+                      id="city_id" href="#">
+                      <label class="transition-all-1s"><i class="bi bi-caret-left pe-3"></i></label>آذربایجان
+                      غربی
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- End Each Area -->
+              <!-- Each Area -->
+              <li>
+                <div class="border-dark border-bottom d-flex flex-column">
+                  <div class="d-flex">
+                    <a class="text-muted d-flex flex-row-reverse justify-content-between fs-8 w-100 py-3 text-black-hover"
+                      onclick="document.querySelector('#sectionShowAreas').classList.toggle('d-none'); document.querySelector('#sectionShowCities').classList.toggle('d-none');"
+                      id="city_id" href="#">
+                      <label class="transition-all-1s"><i class="bi bi-caret-left pe-3"></i></label>آذربایجان
+                      غربی
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- End Each Area -->
+              <!-- Each Area -->
+              <li>
+                <div class="border-dark border-bottom d-flex flex-column">
+                  <div class="d-flex">
+                    <a class="text-muted d-flex flex-row-reverse justify-content-between fs-8 w-100 py-3 text-black-hover"
+                      onclick="document.querySelector('#sectionShowAreas').classList.toggle('d-none'); document.querySelector('#sectionShowCities').classList.toggle('d-none');"
+                      id="city_id" href="#">
+                      <label class="transition-all-1s"><i class="bi bi-caret-left pe-3"></i></label>آذربایجان
+                      غربی
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!-- End Each Area -->
+
+            </div>
+
+
+            <!-- Partial view for select CITY in each AREA -->
+
+            <div class="d-none d-flex flex-column overflow-auto" id="sectionShowCities">
+
+              <div class="d-flex">
+                <a class="text-dark fs-11 w-100 p-3 ps-0 d-flex"
+                  onclick="document.querySelector('#sectionShowAreas').classList.toggle('d-none'); document.querySelector('#sectionShowCities').classList.toggle('d-none');"
+                  href="#">
+                  <label class="text-muted fs-5"><i class="bi bi-arrow-right pe-3"></i></label>همه شهرها
+                </a>
+              </div>
+
+              <div>
+                <ul>
+
+                  <!-- Each City -->
+                  <li>
+                    <a class="text-dark d-flex flex-row-reverse justify-content-between fs-11 w-100 my-3 p-2 py-0 d-flex"
+                      href="#">
+                      <input class="city-tag-checkbox mx-5 pe-3" type="checkbox" name="" id="checkbox-tag-فردیس"
+                        onclick="selectCityfromArea('فردیس', this.checked)">فردیس
+                    </a>
+                  </li>
+                  <!-- End Each City -->
+                  <!-- Each City -->
+                  <li>
+                    <a class="text-dark d-flex flex-row-reverse justify-content-between fs-11 w-100 my-3 p-2 py-0 d-flex"
+                      href="#">
+                      <input class="city-tag-checkbox mx-5 pe-3" type="checkbox" name="" id="checkbox-tag-کرج"
+                        onclick="selectCityfromArea('کرج', this.checked)">کرج
+                    </a>
+                  </li>
+                  <!-- End Each City -->
+                  <!-- Each City -->
+                  <li>
+                    <a class="text-dark d-flex flex-row-reverse justify-content-between fs-11 w-100 my-3 p-2 py-0 d-flex"
+                      href="#">
+                      <input class="city-tag-checkbox mx-5 pe-3" type="checkbox" name="" id="checkbox-tag-گوهردشت"
+                        onclick="selectCityfromArea('گوهردشت', this.checked)">گوهردشت
+                    </a>
+                  </li>
+                  <!-- End Each City -->
+                  <!-- Each City -->
+                  <li>
+                    <a class="text-dark d-flex flex-row-reverse justify-content-between fs-11 w-100 my-3 p-2 py-0 d-flex"
+                      href="#">
+                      <input class="city-tag-checkbox mx-5 pe-3" type="checkbox" name="" id="checkbox-tag-زورآباد"
+                        onclick="selectCityfromArea('زورآباد', this.checked)">زورآباد
+                    </a>
+                  </li>
+                  <!-- End Each City -->
+                  <!-- Each City -->
+                  <li>
+                    <a class="text-dark d-flex flex-row-reverse justify-content-between fs-11 w-100 my-3 p-2 py-0 d-flex"
+                      href="#">
+                      <input class="city-tag-checkbox mx-5 pe-3" type="checkbox" name="" id="checkbox-tag-عظیمیه"
+                        onclick="selectCityfromArea('عظیمیه', this.checked)">عظیمیه
+                    </a>
+                  </li>
+                  <!-- End Each City -->
+
+
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- END Partial view for select area in each city -->
+
+          </ul>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer border-0">
+          <div class="row w-100">
+            <div class="col-md-6 px-1">
+              <button type="button" class="btn bg-light border-1 border-dark text-muted text-black-hover w-100"
+                data-bs-dismiss="modal">انصراف</button>
+            </div>
+            <div class="col-md-6 px-1">
+              <button type="button" class="btn bg-color-brand border-0 text-black-hover w-100 text-white"
+                id="btnSelectCities" disabled>تایید</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- End of The Modal Citys-->
+
+<!-- modal of categories -->
+  <div class="modal fade" id="opencategories" dir="rtl">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content ">
+        <div class="div modal-header cursor-pointer">
+          <span class="h4">دسته بندی ها</span>
+          <i class="bi bi-archive"></i>
+        </div>
+        <!-- body of modal   -->
+        <div class="modal-body p-1 fs-8 ">
+          <div class='px-3 py-2 w-100 hover-light  cursor-pointer transition-bgcolor-1s border-bottom'>
+            <i class="bi bi-house-door text-muted"></i>
+            <a href="" class="text-muted">املاک و خانه</a>
+          </div>
+
+          <div class='px-3 py-2 w-100 cursor-pointer  hover-light transition-bgcolor-1s  border-bottom'>
+            <i class="bi bi-car-front text-muted"></i>
+            <a href="" class="text-muted">وسایل نقلیه</a>
+          </div>
+          <div class='px-3 py-2 w-100  cursor-pointer  hover-light transition-bgcolor-1s  border-bottom'>
+            <i class="bi bi-phone text-muted"></i>
+            <a href="" class="text-muted">کالای دیجیتال</a>
+          </div>
+          <div class='px-3 py-2 w-100  cursor-pointer  hover-light transition-bgcolor-1s  border-bottom'>
+            <i class="bi bi-lamp text-muted"></i>
+            <a href="" class="text-muted">خانه و آشپزخانه</a>
+          </div>
+          <div class='px-3 py-2 w-100  cursor-pointer  hover-light transition-bgcolor-1s  border-bottom'>
+            <i class="bi bi-palette2 text-muted"></i>
+            <a href="" class="text-muted">خدمات</a>
+          </div>
+          <div class='px-3 py-2 w-100  cursor-pointer  hover-light transition-bgcolor-1s  border-bottom'>
+            <i class="bi bi-smartwatch text-muted"></i>
+            <a href="" class="text-muted">وسایل شخصی</a>
+          </div>
+
+          <div class='px-3 py-2 w-100  cursor-pointer  hover-light transition-bgcolor-1s  border-bottom'>
+            <i class="bi bi-dice-5 text-muted"></i>
+            <a href="" class="text-muted">سرگرمی و فراغت</a>
+          </div>
+
+          <div class='px-3 py-2 w-100  cursor-pointer  hover-light transition-bgcolor-1s  border-bottom'>
+            <i class="bi bi-people-fill text-muted"></i>
+            <a href="" class="text-muted">اجتماعی</a>
+          </div>
+
+          <div class='px-3 py-2 w-100  cursor-pointer  hover-light transition-bgcolor-1s  border-bottom'>
+            <i class="bi bi-mic text-muted"></i>
+            <a href="" class="text-muted">تحهیزات و صنعتی</a>
+          </div>
+
+          <div class='px-3 py-2 w-100  cursor-pointer  hover-light transition-bgcolor-1s '>
+            <i class="bi bi-briefcase text-muted"></i>
+            <a href="" class="text-muted">استخدام و کاریابی</a>
+          </div>
+        </div>
+        <!-- end of body modal -->
+        <div class="modal-footer justify-content-between ">
+          <a href="" class="btn bg-brand-color text-white">
+            همه آگهی ها
+          </a>
+          <button class="btn bg-light-owen" data-bs-dismiss="modal">
+            <span>خروج</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- modal of categories -->
+    <!-- modal login user -->
+  <div class="modal fade " id="login-user-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header p-4 w-100">
+          <div class="d-flex justify-content-between w-100">
+            <span class="btn btn-close" data-bs-dismiss="modal"></span>
+            <h5>ورود به حساب کاربری</h5>
+          </div>
+        </div>
+        <div class="modal-body ">
+          <h4 class="text-start px-2 py-3">ایمیل خود را وارد کنید</h4>
+          <p dir="rtl" class="fs-8 p-2 text-muted">برای استفاده از امکانات دیوار، لطفاً ایمیل خود را وارد کنید. کد تأیید
+            به این ایمیل ارسال خواهد شد.</p>
+          <div>
+            <!-- email -->
+            <form id="form-register-login" action="/" class="form-inline py-3">
+              <div class="input-group">
+                <input type="text" name="" 
+                  id="email-form-register-login"
+                  class="form-control p-2"
+                  placeholder="temp@temp.org">
+              </div>
+              <!-- email -->
+              <div class="terms py-4 fs-8 text-start border-bottom pb-5">
+                <span>
+                  <a href="#" class="text-color-brand">شرایط استفاده از خدمات</a>
+                  و
+                  <a href="#" class="text-color-brand">
+                    حریم خصوصی
+                  </a>
+                  دیوار را می پذیرم
+                </span>
+              </div>
+              <div class=" d-flex">
+                <input  type="submit" id="btn-confirm-login-user"
+                value="تایید"
+                 class="mt-3 btn bg-color-brand text-white px-5 py-2 fs-5 ms-auto">        
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- modal login user -->
+
+
+<!-- JavaScript Bundle with Popper -->
+
+<!-- -------------------------------- Error az in shol namos bod -------------------------------- -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> -->
+<!-- -------------------------------- End Error az in shol namos bod -------------------------------- -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="JS/script.js"></script>
+  <script src="../JS/scripts-public.js"></script>
+</body>
+</html>

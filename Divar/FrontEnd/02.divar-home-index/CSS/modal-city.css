@@ -1,0 +1,21 @@
+.bg-danger-hover:hover {
+    background-color: rgba(219, 97, 97, 0.068) !important;
+}
+
+.input-focus:focus-within{
+    border: 2px solid var(--brand-color) !important;
+    box-shadow: none !important;
+}
+.border-gray-hover:hover {
+    border-color: var(--color-gray);
+}
+
+.border-radius-30 {
+    border-radius: 30px;
+}
+
+.border-color-brand{
+    border: 1px solid var(--brand-color) !important;
+}
+
+/* // border color brand */

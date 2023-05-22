@@ -1,0 +1,79 @@
+a {
+    color: var(--color-gray) !important;
+}
+
+.bg-switchToggle-brand {
+    background-color: var(--brand-color) !important;
+    border: var(--brand-color) !important;
+    box-shadow: none !important;
+}
+
+/* some media query For 767 px to fix cards  */
+@media (max-width: 1166px) {
+    .fs-8 {
+        font-size: .9rem;
+    }
+}
+
+/* Start Sidebar Right categories Menu */
+@media screen and (max-width: 992px) {
+    aside.sidebar {
+        display: none;
+    }
+    aside.mini-sidebar {
+        display: block !important;
+    }
+}
+/* end of Sidebar Right categories Menu */
+
+
+@media (max-width: 767px) {
+    .fs-8 {
+        font-size: 1rem;
+    }
+
+    .fs-10 {
+        font-size: .9rem;
+    }
+
+    /* Start sidebar Bottom mobile size */
+    .miniSidebar-button {
+        flex-direction: column;
+        font-size: .8rem;
+    }
+    /* ENd of Start sidebar Bottom mobile size */
+}
+
+
+@media(max-width:450px)
+{
+    .costumer-title{
+        line-height:2;
+        font-size: .9rem;
+    }
+    .costumer-info-caption{
+        font-size: .7rem;
+    }
+
+    .btn-res-bottom{
+        font-size: .8rem;
+    }
+
+}
+
+@media(max-width:475px)
+{
+    .btn-res-bottom{
+        font-size: .7rem;
+    }
+}
+
+@media(max-width:475px)
+{
+    .btn-res-bottom{
+        font-size: .6rem;
+    }
+    .icon-btn-res-bottom{
+        display:none;
+    }
+}
