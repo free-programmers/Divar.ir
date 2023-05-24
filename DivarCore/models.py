@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, BIGINT, DateTime, ForeignKey
 from DivarCore.extenstion import db
 from DivarCore.utils import TimeStamp
 
-def unixtime:
+def unixtime():
     t = TimeStamp()
     return t.now_unixtime()
 
@@ -13,7 +13,7 @@ class BaseModel(db.Model):
 
 class State(db.Model):
     """
-        States Model in db
+        states table in db
     """
     __tablename__ = "divar_state"
     id = Column(Integer(), primary_key=True)
