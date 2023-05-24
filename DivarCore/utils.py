@@ -138,3 +138,35 @@ class TimeStamp:
             gm += 1
         return [gy, gm, gd]
 
+
+    def bigger_date(self, date1, date2):
+        """
+            this method take two date and e return biggest
+            :params: date1, date2
+            - if both dates are equal return True
+            - if date1 is biggest return date1
+            - if date2 is biggest return date2
+        """
+        if date1 > date2:
+            return date1
+        elif date2 > date1:
+            return date2
+        else:
+            return True
+
+    def smaller_date(self, date1, date2):
+        """
+            this method take two date and e return smallets
+            :params: date1, date2
+            - if both dates are equal return True
+            - if date1 is smallest return date1
+            - if date2 is smallest return date2
+        """
+        if date1 < date2:
+            return date1
+        elif date2 < date1:
+            return date2
+        else:
+            return True
+
+
