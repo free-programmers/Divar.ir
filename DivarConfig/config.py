@@ -24,8 +24,8 @@ APP_RUNNER_CONFIG ={
 
 class BaseConfig:
     """ base class for flask app config """
-    SECRET_KEY = "57b29308-87ab-4004-8fa3-0d8f520f002c6b9e5c06322c61942b51ca1a58295906582d00afd9bfd33e97ed53061cfa0b3455a31730bfb20463a93e7a380e0f0bf770ff79ae7592ad5079ec861529bf653c"
-    WTF_CSRF_SECRET_KEY = "7cdfcff48ef70cc266885924ca39d-5bf1-4ac7-b813-1ccbf1d964386cf9df29f7b812184c1ac70dba25e150c829ed421a9850ac0714ef5e0985949782cce8e2d63c9ff1e81cb9d855b4b842c0cca3155fe"
+    SECRET_KEY = "app and app"
+    WTF_CSRF_SECRET_KEY = "app and app"
 
     # sqlalchemy config
     SQLALCHEMY_TRACK_MODIFICATIONS = False
