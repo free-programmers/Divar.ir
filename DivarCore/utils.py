@@ -4,18 +4,22 @@ import khayyam
 
 class TimeStamp:
     """
-        Time stamp class form convert a unix time stamp to georgian and jalali date
+        a base class for working with time in app
+        ~!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!~
+        #todo :
+            add some utils for calculate and some stuff like that one dates
     """
 
-    __now_georgian = None
+    __now_gregorian = None
     __now_jalali = None
     __now_timestamp = None
     __now_time = None
 
     def __init__(self):
+        # constructor method
         self.__now_jalali = self.now_jalali()
         self.__now_gregorian = self.now_gregorian()
-        self.__now_timestamp = self.now_unix()
+        self.__now_timestamp = self.now_unixtime()
         self.__now_time = self.now_time()
 
     @property
@@ -39,27 +43,19 @@ class TimeStamp:
         return self.__now_timestamp
 
     def now_time(self):
-        """
-            this method return now time
-        """
+        """this method return now time"""
         return datetime.datetime.now().time()
 
-    def now_unix(self):
-        """
-            this method return now time in unix time
-        """
+    def now_unixtime(self):
+        """this method return now time in unix time"""
         return int(datetime.datetime.now().timestamp())
 
     def now_gregorian(self):
-        """
-            this method return now time in gregorian time
-        """
+        """this method return now time in gregorian time"""
         return datetime.date.today()
 
     def now_jalali(self):
-        """
-            this method return now time in jalali format
-        """
+        """this method return now time in jalali format"""
         return khayyam.JalaliDate.today()
 
     def convert_jlj2_georgian(self, value: khayyam.JalaliDate):
@@ -69,8 +65,8 @@ class TimeStamp:
         if not isinstance(value, khayyam.JalaliDate):
             raise ValueError("input must be a khayyam.JalaliDatetime instance")
         year, month, day = value.year, value.month, value.day
-        date = self._jalali_to_gregorian(jy=year, jm=month, jd=day)
-        return datetime.datet(year=date[0], month=date[1], day=date[2])
+        date = self._jalali_to_gregorian(year, month, day)
+        return datetime.date(year=date[0], month=date[1], day=date[2])
 
     def convert_grg2_jalali(self, value: datetime.date):
         """
@@ -79,10 +75,10 @@ class TimeStamp:
         if not isinstance(value, datetime.date):
             raise ValueError("input must be a khayyam.JalaliDatetime instance")
         year, month, day = value.year, value.month, value.day
-        date = self._gregorian_to_jalali(gy=year, gm=month, gd=day)
+        date = self._gregorian_to_jalali(year, month, day)
         return khayyam.JalaliDate(year=date[0], month=date[1], day=date[2])
 
-    def _gregorian_to_jalali(gy, gm, gd):
+    def _gregorian_to_jalali(self, gy, gm, gd):
         """
             this method convert a gregorian to a jalali date
         """
@@ -107,7 +103,7 @@ class TimeStamp:
             jd = 1 + ((days - 186) % 30)
         return [jy, jm, jd]
 
-    def _jalali_to_gregorian(jy, jm, jd):
+    def _jalali_to_gregorian(self, jy, jm, jd):
         """
             this method convert a jalali time to a gregorian time
         """
