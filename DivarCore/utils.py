@@ -43,22 +43,22 @@ class TimeStamp:
         return self.__now_timestamp
 
     @staticmethod
-    def now_time(self):
+    def now_time():
         """this method return now time"""
         return datetime.datetime.now().time()
 
     @staticmethod
-    def now_unixtime(self):
+    def now_unixtime():
         """this method return now time in unix time"""
         return int(datetime.datetime.now().timestamp())
 
     @staticmethod
-    def now_gregorian(self):
+    def now_gregorian():
         """this method return now time in gregorian time"""
         return datetime.date.today()
 
     @staticmethod
-    def now_jalali(self):
+    def now_jalali():
         """this method return now time in jalali format"""
         return khayyam.JalaliDate.today()
 
