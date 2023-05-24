@@ -28,7 +28,7 @@ class TimeStamp:
         return self.__now_time
 
     @property
-    def georgian(self):
+    def gregorian(self):
         """Return Gregorian time That Object created"""
         return self.__now_gregorian
 
