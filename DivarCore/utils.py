@@ -42,18 +42,22 @@ class TimeStamp:
         """Return timestamp time That Object created"""
         return self.__now_timestamp
 
+    @staticmethod
     def now_time(self):
         """this method return now time"""
         return datetime.datetime.now().time()
 
+    @staticmethod
     def now_unixtime(self):
         """this method return now time in unix time"""
         return int(datetime.datetime.now().timestamp())
 
+    @staticmethod
     def now_gregorian(self):
         """this method return now time in gregorian time"""
         return datetime.date.today()
 
+    @staticmethod
     def now_jalali(self):
         """this method return now time in jalali format"""
         return khayyam.JalaliDate.today()
