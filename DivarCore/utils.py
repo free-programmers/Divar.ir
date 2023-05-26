@@ -1,5 +1,21 @@
 import datetime
 import khayyam
+from functools import wraps
+
+from flask import request, jsonify, abort
+
+
+
+def json_only(func):
+    """
+        this decorator only accepted Json request
+    """
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if not request.is_json:
+            return jsonify({'error': 'Only JSON requests are accepted'}), 400
+        return func(*args, **kwargs)
+    return wrapper
 
 
 class TimeStamp:
@@ -172,5 +188,53 @@ class TimeStamp:
             return date2
         else:
             return True
+
+
+class ArgParser:
+    __RULES = None
+
+    def __init__(self):
+        self.__RULES = []
+
+    def add_rules(self, Fname:str, Ferror:str):
+        if not Fname or not Ferror:
+            raise ValueError("Some Params are Missing")
+
+        temp = {}
+        temp["name"] = Fname
+        temp["error"] = Ferror
+        self._add_rules(temp)
+
+    def _add_rules(self, val:dict):
+        print(val)
+        self.__RULES.append(val)
+
+    def _check_rule(self):
+        args = request.json
+        for each in self.__RULES:
+            name = each["name"]
+            error = each["error"]
+
+            if not args.get(name, False):
+                return jsonify({"error": error}), 400
+
+            if not type(args[name]) != type:
+                return jsonify({"error": f"{name} type is incorrect!"}), 400
+
+
+    def verify(self, f):
+        """
+            this method verify request
+            that have base requirements params
+        """
+        @wraps(f)
+        def decorator(*args, **kwargs):
+
+            if (errCheck:=self._check_rule()):
+                return errCheck
+
+
+            return f(*args, **kwargs)
+        return decorator
 
 

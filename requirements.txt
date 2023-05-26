@@ -9,6 +9,7 @@ colorama==0.4.6
 decorator==5.1.1
 executing==1.2.0
 Flask==2.3.2
+Flask-JWT-Extended==4.4.4
 Flask-Migrate==4.0.4
 Flask-RESTful==0.3.10
 Flask-Session==0.5.0
@@ -22,6 +23,7 @@ ipython==8.12.2
 itsdangerous==2.1.2
 jedi==0.18.2
 Jinja2==3.1.2
+Khayyam==3.0.17
 Mako==1.2.4
 MarkupSafe==2.1.2
 matplotlib-inline==0.1.6
@@ -30,6 +32,7 @@ pickleshare==0.7.5
 prompt-toolkit==3.0.38
 pure-eval==0.2.2
 Pygments==2.15.1
+PyJWT==2.7.0
 PyMySQL==1.0.3
 pytz==2023.3
 six==1.16.0

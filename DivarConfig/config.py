@@ -27,6 +27,9 @@ class BaseConfig:
     SECRET_KEY = "app and app"
     WTF_CSRF_SECRET_KEY = "app and app"
 
+    # jtw config
+    JWT_SECRET_KEY = "app and app"
+
     # sqlalchemy config
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{USERNAME_DB}:{PASSWORD_DB}@{HOST_DB}:{PORT_DB}/{NAME_DB}"
