@@ -9,30 +9,33 @@
 
 
 ---
-## Login view
-### /auth/login/
+## Register view
+### /auth/api/Register/
 #### content type json
 #### params: 
     {
-        "username":"user's username",
-        "password": "user's password",
+        "phonenumber" : "user's phone number",
     }
-#### return answer
-- if username and password correct:
+
+#### return response
+- if phone number is already have account:
+
     
-
     {
-        "accessToken":"access token",
-        "refreshToken":"refresh token"
-    } 
-    status code: 200
-
-- else :
-    
-
-    {
-        "error": "invalid credential"
+        "error": "Account already Exists"
     }
-    status code: 401
+    status code: 409
+
+else:
+
+        at this point user added to db and a sms with a verify code send 
+        to user phone number the  code is valid for 5 minute 
+
+        {
+            "message": "User Created Successfully",
+            "phone": "user phone number",
+            "token": "eb3ed707-f72e-4271-930a-a6e5c89f0ca0"
+        }
+        status code :200
 
 ---

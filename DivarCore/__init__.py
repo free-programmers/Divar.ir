@@ -1,6 +1,6 @@
 from flask import Flask
 from DivarConfig import Development
-
+from DivarCore.extenstion import db, migrate, redisServer
 
 
 def create_app():
@@ -11,6 +11,9 @@ def create_app():
     from DivarAuth import auth
     app.register_blueprint(auth, url_prefix="/auth")
 
+    db.init_app(app)
+    migrate.init_app(app=app, db=db)
+    redisServer.from_url(app.config["REDIS_URL"])
 
     return app
 

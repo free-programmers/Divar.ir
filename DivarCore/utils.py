@@ -197,6 +197,7 @@ class ArgParser:
         self.__RULES = []
 
     def add_rules(self, Fname:str, Ferror:str):
+        """This method add rule to arg rule"""
         if not Fname or not Ferror:
             raise ValueError("Some Params are Missing")
 
@@ -206,11 +207,16 @@ class ArgParser:
         self._add_rules(temp)
 
     def _add_rules(self, val:dict):
-        print(val)
+        """This method add rule to arg rule"""
         self.__RULES.append(val)
 
     def _check_rule(self):
+        """This method Check rules in coming request"""
         args = request.json
+
+        if len(args) != len(self.__RULES):
+            return jsonify({"error": f"params are invalid. this view Accept only {[x['name'] for x in self.__RULES]}"}), 400
+
         for each in self.__RULES:
             name = each["name"]
             error = each["error"]

@@ -1,6 +1,11 @@
 import csv
 import os.path
 
+
+def send_sms(to, msg):
+    return True
+
+
 def read_state(path: os.path):
     """
         this function read a csv file that contain iran states

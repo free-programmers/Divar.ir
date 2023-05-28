@@ -7,7 +7,7 @@ import datetime
 API_KEY = os.getenv("API_KEY")
 
 
-NAME_DB = "app"
+NAME_DB = "divar"
 USERNAME_DB = "root"
 PASSWORD_DB = ""
 HOST_DB = "localhost"
@@ -16,9 +16,9 @@ PORT_DB = 3307
 
 BASEDIR = Path(__file__).parent.parent
 APP_RUNNER_CONFIG ={
-    "port":8080,
-    "debug":True,
-    "host":"0.0.0.0"
+    "port": 8080,
+    "debug": True,
+    "host": "0.0.0.0"
 }
 
 
@@ -34,16 +34,18 @@ class BaseConfig:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{USERNAME_DB}:{PASSWORD_DB}@{HOST_DB}:{PORT_DB}/{NAME_DB}"
 
+    # redis
+    REDIS_URL = "redis://localhost:6379"
 
     # Session config
-    SESSION_PERMANENT = False
-    SESSION_TYPE = "filesystem"
-    SESSION_COOKIE_SECURE = True
-    SESSION_COOKIE_SECURE = True
-    SESSION_COOKIE_HTTPONLY = True
-    SESSION_COOKIE_SAMESITE = 'Lax'
-    SESSION_COOKIE_NAME = 'DivarSessionApp'
-    PERMANENT_SESSION_LIFETIME = datetime.timedelta(minutes=16)
+    # SESSION_PERMANENT = False
+    # SESSION_TYPE = "filesystem"
+    # SESSION_COOKIE_SECURE = True
+    # SESSION_COOKIE_SECURE = True
+    # SESSION_COOKIE_HTTPONLY = True
+    # SESSION_COOKIE_SAMESITE = 'Lax'
+    # SESSION_COOKIE_NAME = 'DivarSessionApp'
+    # PERMANENT_SESSION_LIFETIME = datetime.timedelta(minutes=16)
 
     # mail config
     MAIL_SERVER = ""
@@ -60,8 +62,8 @@ class BaseConfig:
 
 
 class Development(BaseConfig):
-    DEBUG = False
-    FLASK_DEBUG = False
+    DEBUG = True
+    FLASK_DEBUG = True
 
 
 class Production(BaseConfig):
