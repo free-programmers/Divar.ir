@@ -11,7 +11,7 @@
 ---
 ## Register view
 ### /auth/api/Register/
-#### content type json
+#### content type json / POST
 #### params: 
     {
         "phonenumber" : "user's phone number",
@@ -39,3 +39,28 @@ else:
         status code :200
 
 ---
+
+
+## Verify user account
+### /auth/api/verify/
+#### content type json / POST
+params :
+        
+        {
+            "code":code that user type in,
+            "token":token that user get when created an account,
+            "phone":user phone number
+        }
+
+return response:
+
+    if is any params missing it always return error
+    
+    otherwise if code or token is in valid it return an error with 400
+
+if everything is ok verified user account and return 
+
+    {
+	"message": "User verify Successfully!"
+    }   
+    status code : 200

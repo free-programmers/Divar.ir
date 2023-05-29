@@ -2,8 +2,8 @@ import datetime
 import khayyam
 from functools import wraps
 
-from flask import request, jsonify, abort
-
+from flask import request, jsonify
+from ExtraUtils.constans.http_status_code import HTTP_400_BAD_REQUEST
 
 
 def json_only(func):
@@ -13,7 +13,7 @@ def json_only(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         if not request.is_json:
-            return jsonify({'error': 'Only JSON requests are accepted'}), 400
+            return jsonify({'error': 'Only JSON requests are accepted'}), HTTP_400_BAD_REQUEST
         return func(*args, **kwargs)
     return wrapper
 
@@ -212,20 +212,25 @@ class ArgParser:
 
     def _check_rule(self):
         """This method Check rules in coming request"""
-        args = request.json
+
+        # if incoming request is not json
+        try:
+            args = request.json
+        except:
+            return jsonify({"error":"Bad Json!"}), HTTP_400_BAD_REQUEST
 
         if len(args) != len(self.__RULES):
-            return jsonify({"error": f"params are invalid. this view Accept only {[x['name'] for x in self.__RULES]}"}), 400
+            return jsonify({"error": f"params are invalid. this view Accept only {[x['name'] for x in self.__RULES]}"}),HTTP_400_BAD_REQUEST
 
         for each in self.__RULES:
             name = each["name"]
             error = each["error"]
 
             if not args.get(name, False):
-                return jsonify({"error": error}), 400
+                return jsonify({"error": error}), HTTP_400_BAD_REQUEST
 
             if not type(args[name]) != type:
-                return jsonify({"error": f"{name} type is incorrect!"}), 400
+                return jsonify({"error": f"{name} type is incorrect!"}), HTTP_400_BAD_REQUEST
 
 
     def verify(self, f):
