@@ -161,7 +161,7 @@ class TimeStamp:
 
     def bigger_date(self, date1, date2):
         """
-            this method take two date and return biggest date
+           this method takes two dates and returns the biggest date
             :params: date1, date2
             - if both dates are equal return True
             - if date1 is biggest return date1
@@ -176,7 +176,7 @@ class TimeStamp:
 
     def smaller_date(self, date1, date2):
         """
-            this method take two date and return smallets date
+            this method takes two dates and returns the smallest date
             :params: date1, date2
             - if both dates are equal return True
             - if date1 is smallest return date1
