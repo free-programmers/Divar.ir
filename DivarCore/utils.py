@@ -23,7 +23,7 @@ class TimeStamp:
         a base class for working with time in app
         ~!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!~
         #todo :
-            add some utils for calculate and some stuff like that one dates
+            add some utils for calculate and some stuff like that on date and times
     """
 
     __now_gregorian = None
