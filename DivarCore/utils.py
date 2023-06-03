@@ -161,7 +161,7 @@ class TimeStamp:
 
     def bigger_date(self, date1, date2):
         """
-            this method take two date and e return biggest
+            this method take two date and return biggest date
             :params: date1, date2
             - if both dates are equal return True
             - if date1 is biggest return date1
@@ -176,7 +176,7 @@ class TimeStamp:
 
     def smaller_date(self, date1, date2):
         """
-            this method take two date and e return smallets
+            this method take two date and return smallets date
             :params: date1, date2
             - if both dates are equal return True
             - if date1 is smallest return date1
@@ -191,13 +191,14 @@ class TimeStamp:
 
 
 class ArgParser:
+    """ an Argument Parser for API routes """
     __RULES = None
 
     def __init__(self):
         self.__RULES = []
 
     def add_rules(self, Fname:str, Ferror:str):
-        """This method add rule to arg rule"""
+        """Use this method for adding new rule to arg parser """
         if not Fname or not Ferror:
             raise ValueError("Some Params are Missing")
 
@@ -207,18 +208,24 @@ class ArgParser:
         self._add_rules(temp)
 
     def _add_rules(self, val:dict):
-        """This method add rule to arg rule"""
+        """This method add rule that user added to rule pool"""
         self.__RULES.append(val)
 
     def _check_rule(self):
-        """This method Check rules in coming request"""
+        """
+        This method Check rules in coming request
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        1. check incoming request is json 
+        2. check totle length of incoming request with rules that user added
+        3. check each rule in request
+        """
 
         # if incoming request is not json
         try:
             args = request.json
         except:
             return jsonify({"error":"Bad Json!"}), HTTP_400_BAD_REQUEST
-
+        
         if len(args) != len(self.__RULES):
             return jsonify({"error": f"params are invalid. this view Accept only {[x['name'] for x in self.__RULES]}"}),HTTP_400_BAD_REQUEST
 
@@ -235,15 +242,15 @@ class ArgParser:
 
     def verify(self, f):
         """
+            Use This Method as a decorator above on your route
             this method verify request
-            that have base requirements params
+            that have base on arg rules
         """
         @wraps(f)
         def decorator(*args, **kwargs):
-
-            if (errCheck:=self._check_rule()):
+    
+            if (errCheck := self._check_rule()):
                 return errCheck
-
 
             return f(*args, **kwargs)
         return decorator
