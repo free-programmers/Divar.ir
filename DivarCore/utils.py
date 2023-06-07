@@ -20,7 +20,7 @@ def json_only(func):
 
 class TimeStamp:
     """
-        a base class for working with time in app
+        a base class for working with time&times in app
         ~!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!~
         #todo :
             add some utils for calculate and some stuff like that on date and times
@@ -78,25 +78,48 @@ class TimeStamp:
         """this method return now time in jalali format"""
         return khayyam.JalaliDate.today()
 
-    def convert_jlj2_georgian(self, value: khayyam.JalaliDate):
+    def convert_jlj2_georgian_d(self, value: khayyam.JalaliDate):
         """
             this method get a khayyam date<jalali> and convert it to gregorian object datetime.date
         """
         if not isinstance(value, khayyam.JalaliDate):
-            raise ValueError("input must be a khayyam.JalaliDatetime instance")
+            raise ValueError("input must be a khayyam.JalaliDate instance")
         year, month, day = value.year, value.month, value.day
         date = self._jalali_to_gregorian(year, month, day)
         return datetime.date(year=date[0], month=date[1], day=date[2])
 
-    def convert_grg2_jalali(self, value: datetime.date):
+    def convert_grg2_jalali_d(self, value: datetime.date):
         """
             this method get a datetime.date object and convert it o khayyam object
         """
         if not isinstance(value, datetime.date):
-            raise ValueError("input must be a khayyam.JalaliDatetime instance")
+            raise ValueError("input must be a Datetime.Date instance")
+
         year, month, day = value.year, value.month, value.day
         date = self._gregorian_to_jalali(year, month, day)
         return khayyam.JalaliDate(year=date[0], month=date[1], day=date[2])
+
+    def convert_jlj2_georgian_dt(self, value: khayyam.JalaliDatetime):
+        """
+            this method get a khayyam date<jalali> and convert it to gregorian object datetime.datetime
+        """
+        if not isinstance(value, khayyam.JalaliDatetime):
+            raise ValueError("input must be a khayyam.JalaliDatetime instance")
+
+        year, month, day, hour, minute, second, microsecond = value.year, value.month, value.day, value.hour, value.minute, value.second, value.microsecond
+        date = self._jalali_to_gregorian(year, month, day)
+        print(hour,minute,second,microsecond)
+        return datetime.datetime(year=date[0], month=date[1], day=date[2], hour=hour, minute=minute, second=second, microsecond=microsecond)
+
+    def convert_grg2_jalali_dt(self, value: datetime.datetime):
+        """
+            this method get a datetime.date object and convert it o khayyam.KhayyamDatetime object
+        """
+        if not isinstance(value, datetime.datetime):
+            raise ValueError("input must be a khayyam.JalaliDatetime instance")
+        year, month, day, hour, minute, second, microsecond = value.year, value.month, value.day, value.hour, value.minute, value.second, value.microsecond
+        date = self._gregorian_to_jalali(year, month, day)
+        return khayyam.JalaliDatetime(year=date[0], month=date[1], day=date[2],hour=hour, minute=minute, second=second, microsecond=microsecond)
 
     def _gregorian_to_jalali(self, gy, gm, gd):
         """
@@ -158,7 +181,6 @@ class TimeStamp:
             gm += 1
         return [gy, gm, gd]
 
-
     def bigger_date(self, date1, date2):
         """
            this method takes two dates and returns the biggest date
@@ -188,6 +210,7 @@ class TimeStamp:
             return date2
         else:
             return True
+
 
 
 class ArgParser:
