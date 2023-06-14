@@ -140,7 +140,8 @@ class TimeStamp:
 
     def _gregorian_to_jalali(self, gy, gm, gd):
         """
-            this method convert a gregorian to a jalali date
+            this method convert a Gregorian to a Jalali date
+            https://jdf.scr.ir/
         """
         g_d_m = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
         if (gm > 2):
@@ -165,7 +166,8 @@ class TimeStamp:
 
     def _jalali_to_gregorian(self, jy, jm, jd):
         """
-            this method convert a jalali time to a gregorian time
+            this method convert a Jalali time to a Gregorian time
+            https://jdf.scr.ir/
         """
         jy += 1595
         days = -355668 + (365 * jy) + ((jy // 33) * 8) + (((jy % 33) + 3) // 4) + jd
