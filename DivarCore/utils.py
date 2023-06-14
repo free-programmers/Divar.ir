@@ -78,6 +78,23 @@ class TimeStamp:
         """this method return now time in jalali format"""
         return khayyam.JalaliDate.today()
 
+    @staticmethod
+    def is_persian_date(date: str) -> bool:
+        """
+            This function take a  date in format of string
+            and check its valid jalali persian date or not
+        """
+        date = date.split("/")
+        if len(date) == 3:
+            try:
+                khayyam.JalaliDate(year=date[0], month=date[1], day=date[2])
+            except Exception as e:
+                return False
+            else:
+                return True
+
+        return False
+
     def convert_jlj2_georgian_d(self, value: khayyam.JalaliDate):
         """
             this method get a khayyam date<jalali> and convert it to gregorian object datetime.date
@@ -181,6 +198,15 @@ class TimeStamp:
             gm += 1
         return [gy, gm, gd]
 
+
+    def convert_string_jalali2_dateD(self, value:str)->datetime.date:
+        if not self.is_persian_date(value):
+            raise ValueError("Input is not a valid date format YYYY/MM/DD")
+        value = value.split("/")
+        jDate = khayyam.JalaliDate(year=value[0], month=value[1], day=value[2])
+        return self.convert_jlj2_georgian_d(jDate)
+
+
     def bigger_date(self, date1, date2):
         """
            this method takes two dates and returns the biggest date
@@ -210,6 +236,8 @@ class TimeStamp:
             return date2
         else:
             return True
+
+
 
 
 
