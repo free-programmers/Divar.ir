@@ -14,5 +14,5 @@ class User(BaseModel):
         return f"User>> {self.id}"
 
     def GetPublicKey(self):
-        return self.public_key
+        return self.PublicKey
 

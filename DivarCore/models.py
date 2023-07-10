@@ -16,7 +16,7 @@ class BaseModel(db.Model):
     def SetPublicKey(self):
         while True:
             token = str(uuid.uuid4())
-            if self.query.filter_by(self.PublicKey == token).first():
+            if self.query.filter(self.PublicKey == token).first():
                 continue
             else:
                 self.PublicKey = token
