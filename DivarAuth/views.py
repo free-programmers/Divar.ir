@@ -9,9 +9,10 @@ from DivarCore.extenstion import redisServer, db
 from DivarAuth.utils import generate_account_verify_token
 from ExtraUtils.utils import send_sms
 from ExtraUtils.constans.http_status_code import (
+    HTTP_404_NOT_FOUND,
     HTTP_400_BAD_REQUEST,
     HTTP_409_CONFLICT,
-    HTTP_200_OK
+    HTTP_200_OK,
 )
 
 
@@ -116,8 +117,7 @@ def verify_user_account():
 
 
 LOGIN_ARG_PARSER = ArgParser()
-LOGIN_ARG_PARSER.add_rules(Fname="username", Ferror="Username is required")
-LOGIN_ARG_PARSER.add_rules(Fname="password", Ferror="password is required")
+LOGIN_ARG_PARSER.add_rules(Fname="phonenumber", Ferror="PhoneNumber is required")
 @auth.route("/api/login/", methods=["POST"])
 @json_only
 @LOGIN_ARG_PARSER.verify
@@ -126,6 +126,10 @@ def login_user():
         this view take a post request for login user and if it's correct return jwt token
     """
     args = request.get_json()
-    username, password = args.get("username"), args.get("password")
+    phoneNumber = args.get("phonenumber")
 
-    AuthModel.User.query.filter(AuthModel.User.).first()
+    if not (user_db := AuthModel.User.query.filter(AuthModel.User.PhoneNumber == phoneNumber).first()):
+        return jsonify({'error':'User does not exist'}), HTTP_404_NOT_FOUND
+
+    userPublicKey = user_db.GetPubicKey()
+

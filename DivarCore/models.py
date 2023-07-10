@@ -1,19 +1,28 @@
+import uuid
 import datetime
-from sqlalchemy import Column, Integer, String, BIGINT, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String, BIGINT, DateTime
 from DivarCore.extenstion import db
 from DivarCore.utils import TimeStamp
-
-def unixtime():
-    t = TimeStamp()
-    return t.now_unixtime()
-
 
 class BaseModel(db.Model):
     __abstract__ = True
 
     id = Column(Integer, primary_key=True)
-    Updated_at = Column(BIGINT(), default=unixtime, nullable=False, unique=False, onupdate=unixtime)
+    Updated_at = Column(BIGINT(), default=TimeStamp.now_unixtime, nullable=False, unique=False, onupdate=TimeStamp.now_unixtime)
     Created_at = Column(DateTime(), default=datetime.datetime.utcnow, nullable=False, unique=False)
+
+    PublicKey = Column(String(36), nullable=False, unique=True)
+
+    def SetPublicKey(self):
+        while True:
+            token = str(uuid.uuid4())
+            if self.query.filter_by(self.PublicKey == token).first():
+                continue
+            else:
+                self.PublicKey = token
+                break
+
+
 
 # class State(db.Model):
 #     """

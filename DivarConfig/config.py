@@ -1,20 +1,24 @@
 import os
-from pathlib import Path
 import datetime
+from pathlib import Path
+from dotenv import load_dotenv
 
+load_dotenv()
+print(os.environ)
+
+BASEDIR = Path(__file__).parent.parent
 
 # sms api key
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.environ.get("API_KEY")
 
 
 NAME_DB = "divar"
-USERNAME_DB = "root"
-PASSWORD_DB = ""
+USERNAME_DB = "divar" # local db
+PASSWORD_DB = "123654" # test password for localhost only
 HOST_DB = "localhost"
-PORT_DB = 3307
+PORT_DB = 3306
 
 
-BASEDIR = Path(__file__).parent.parent
 APP_RUNNER_CONFIG ={
     "port": 8080,
     "debug": True,
@@ -28,7 +32,7 @@ class BaseConfig:
     WTF_CSRF_SECRET_KEY = "app and app"
 
     # jtw config
-    JWT_SECRET_KEY = "app and app"
+    JWT_SECRET_KEY = "super secure :)"
 
     # sqlalchemy config
     SQLALCHEMY_TRACK_MODIFICATIONS = False
