@@ -72,6 +72,7 @@ VERIFY_USER_ARG_PARSER.add_rules(Fname="code", Ferror="code is required")
 def verify_user_account():
     """
         this view take a post request for verify user account
+        aka: create user account in db
     """
     args = request.get_json()
     phone, code, token = args.get("phone"), args.get("code"),args.get("token")
@@ -186,11 +187,11 @@ def verify_login():
         redisServer.delete(code)
         redisServer.delete(user_id+"_login")
 
-        access_token = create_access_token(identity=user_id, expires_delta=datetime.timedelta(days=15))
-        refresh_token = create_refresh_token(identity=user_id, expires_delta=datetime.timedelta(days=16))
+        access_token = create_access_token(identity=user_id)
+        refresh_token = create_refresh_token(identity=user_id, expires_delta=datetime.timedelta(days=30))
         return jsonify({
             "access_token": access_token,
-            "refresh_token":refresh_token
+            "refresh_token": refresh_token
         }), HTTP_200_OK
 
 
