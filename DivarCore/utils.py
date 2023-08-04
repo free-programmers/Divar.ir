@@ -323,25 +323,13 @@ class ArgParser:
                 return jsonify({"error": f"{name} type is incorrect!, valid type is \\{self.__TYPE_MAPPING[Ftype]}\\".title()}), HTTP_400_BAD_REQUEST
 
 
-    def verify(self, f):
-        """
-            Use This Method as a decorator above on your route
-            this method verify request
-            that have base on arg rules
-        """
-        @wraps(f)
-        def decorator(*args, **kwargs):
-    
-            if (errCheck := self._check_rule()):
-                return errCheck
-
-            return f(*args, **kwargs)
-        return decorator
-
 
     def __call__(self, f, **kwargs):
         """
-        Use ArgParser instance as a decorator over Routes
+        Use ArgParser class itself as a decorator over Routes
+
+            this method verify request
+            that have base on arg rules
         """
         @wraps(f)
         def decorator(*args, **kwargs):
