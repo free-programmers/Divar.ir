@@ -12,16 +12,26 @@ More info : https://en.wikipedia.org/wiki/Divar_(website)
 
 
 
-how to install requirements:
-        
-        pip3 install -r requirements.txt
-        or 
-        pip install -r requirements.txt
+Tech Stack:
 
 
-how to run:
-        
-        python app.py <in main dir>
+    python3
+    Flask
+        Flask-Smorest
+        Flask-session
+        Flask-Sqlalchemy
+        Flask-Migrate
+        Flask-Wtf
+        Flask-RQ
+    Redis
+    Mysql 
+    Flask-JWT-Extended
+    
+
+## How To Run App:
+
+### 0.0 First Configure the Application Settings 
+- For Configure Settings <a href="./docs/Configuration">Help</a> 
 
 
 
