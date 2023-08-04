@@ -245,12 +245,32 @@ class TimeStamp:
 
 class ArgParser:
     """ an Argument Parser for API routes """
+
+    class InvalidTypeError(ValueError):
+        pass
+
+
     __RULES = None
+    __TYPE_MAPPING={
+        str:"string",
+        int:"integer",
+        float:"float",
+        list:"list (Array)",
+        dict:"object",
+    }
+    __TYPES = [
+        str,
+        list,
+        int,
+        float,
+        dict,
+    ]
+
 
     def __init__(self):
         self.__RULES = []
 
-    def add_rules(self, Fname:str, Ferror:str):
+    def add_rules(self, Fname:str, Ferror:str, Ftype:str=str):
         """Use this method for adding new rule to arg parser """
         if not Fname or not Ferror:
             raise ValueError("Some Params are Missing")
@@ -258,6 +278,10 @@ class ArgParser:
         temp = {}
         temp["name"] = Fname
         temp["error"] = Ferror
+        if Ftype not in self.__TYPES:
+            raise self.InvalidTypeError("Invalid Type are given for parameter type ...")
+
+        temp["type"] = Ftype
         self._add_rules(temp)
 
     def _add_rules(self, val:dict):
@@ -269,7 +293,7 @@ class ArgParser:
         This method Check rules in coming request
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         1. check incoming request is json 
-        2. check totle length of incoming request with rules that user added
+        2. check total length of incoming request with rules that user added
         3. check each rule in request
         """
 
@@ -285,12 +309,13 @@ class ArgParser:
         for each in self.__RULES:
             name = each["name"]
             error = each["error"]
+            type = each["type"]
 
             if not args.get(name, False):
                 return jsonify({"error": error}), HTTP_400_BAD_REQUEST
 
-            if not type(args[name]) != type:
-                return jsonify({"error": f"{name} type is incorrect!"}), HTTP_400_BAD_REQUEST
+            if type(args[name]) != type:
+                return jsonify({"error": f"{name} type is incorrect!, valid type is {self.__TYPE_MAPPING[type]}"}), HTTP_400_BAD_REQUEST
 
 
     def verify(self, f):
@@ -306,6 +331,20 @@ class ArgParser:
                 return errCheck
 
             return f(*args, **kwargs)
+        return decorator
+
+
+    def __call__(self, *args, **kwargs):
+        """
+        Use ArgParser instance as a decorator over Routes
+        """
+        @wraps(f)
+        def decorator(*args, **kwargs):
+            if (errCheck := self._check_rule()):
+                return errCheck
+
+            return f(*args, **kwargs)
+
         return decorator
 
 

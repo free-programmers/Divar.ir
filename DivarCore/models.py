@@ -3,8 +3,14 @@ import datetime
 from sqlalchemy import Column, Integer, String, BIGINT, DateTime
 from DivarCore.extenstion import db
 from DivarCore.utils import TimeStamp
+from DivarConfig.config import DATABASE_TABLE_PREFIX
+from DivarExceptions.database import TableNameNotProvidedError
+
 
 class BaseModel(db.Model):
+    """
+    Base Class for all Models
+    """
     __abstract__ = True
 
     id = Column(Integer, primary_key=True)
@@ -14,6 +20,7 @@ class BaseModel(db.Model):
     PublicKey = Column(String(36), nullable=False, unique=True)
 
     def SetPublicKey(self):
+        """Set Unique Public Key For each Instance in db"""
         while True:
             token = str(uuid.uuid4())
             if self.query.filter(self.PublicKey == token).first():
@@ -22,24 +29,13 @@ class BaseModel(db.Model):
                 self.PublicKey = token
                 break
 
+    @staticmethod
+    def SetTableName(database_name:str):
+        """
+        Set the name of the Table in database + table prefix
+        """
+        if not database_name:
+            raise TableNameNotProvidedError("Database Name is not provided")
+        return f"{DATABASE_TABLE_PREFIX}{database_name}"
 
 
-# class State(db.Model):
-#     """
-#         states table in db
-#     """
-#     __tablename__ = "divar_state"
-#     id = Column(Integer(), primary_key=True)
-#     stateName = Column(String(128), nullable=False, unique=False)
-#
-#     cities = db.relationship("City", backref="State", lazy=True)
-#
-#
-# class City(db.Model):
-#     """
-#         cities table in db
-#     """
-#     __tablename__ = "divar_city"
-#     id = Column(Integer(), primary_key=True)
-#     cityName = Column(String(128), nullable=False, unique=False)
-#     stateID = Column(Integer(), ForeignKey("divar_state.id"), nullable=False)

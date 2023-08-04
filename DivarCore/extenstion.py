@@ -6,14 +6,18 @@ from flask_session import Session
 from flask_jwt_extended import JWTManager
 from redis import Redis
 from sms_ir import SmsIr
+from DivarConfig.config import SMS_API, SMS_LINE_NUMBER
+from flask_wtf.csrf import CSRFProtect
 
-session = Session()
+
+
+ServerSessionManager = Session()
 migrate = Migrate()
 db = SQLAlchemy()
-jwtMNG = JWTManager()
-redisServer = Redis()
+ServerJWTManager = JWTManager()
+ServerRedis = Redis()
+ServerCSRF = CSRFProtect()
 SmsIR = SmsIr(
-    api_key="reandom",
-    linenumber="random as well"
+    api_key=SMS_API,
+    linenumber=SMS_LINE_NUMBER
 )
-# csrf = CSRFProtect()

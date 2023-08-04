@@ -1,11 +1,10 @@
 from flask import Flask
-from DivarConfig import Development
-from DivarCore.extenstion import db, migrate, redisServer, jwtMNG
-
+from DivarConfig import BaseConfig
+from DivarCore.extenstion import db, migrate, ServerRedis, ServerJWTManager
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_object(Development)
+    app.config.from_object(BaseConfig)
 
     # register blueprints
     from DivarAuth import auth
@@ -13,8 +12,8 @@ def create_app():
 
     db.init_app(app)
     migrate.init_app(app=app, db=db)
-    redisServer.from_url(app.config["REDIS_URL"])
-    jwtMNG.init_app(app=app)
+    ServerRedis.from_url(app.config["REDIS_URL"])
+    ServerJWTManager.init_app(app=app)
 
     return app
 
