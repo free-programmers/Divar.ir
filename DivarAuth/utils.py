@@ -1,5 +1,5 @@
 import random
-from DivarCore.extenstion import redisServer
+from DivarCore.extenstion import ServerRedis
 
 def generate_account_verify_token():
     """Generate a token for verify user account"""
@@ -10,7 +10,7 @@ def generate_login_code():
     while True:
         code = random.randint(999_99+1, 999_999+1)
         code = str(code)
-        if redisServer.get(code):
+        if ServerRedis.get(code):
             continue
         else:
             return str(code)
