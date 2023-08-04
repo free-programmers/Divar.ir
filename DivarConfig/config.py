@@ -17,7 +17,7 @@ DATABASE_USER = os.environ.get("DATABASE_USER", "root")
 DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD", "")
 DATABASE_HOST = os.environ.get("DATABASE_HOST", "localhost")
 DATABASE_PORT = os.environ.get("DATABASE_PORT", "3306")
-
+DATABASE_TABLE_PREFIX = os.environ.get("DATABASE_TABLE_PREFIX", "DIVAR_")
 
 APP_RUNNER_CONFIG ={
     "port": os.environ.get("APP_PORT", 5000),
@@ -45,7 +45,7 @@ class BaseConfig:
     REDIS_PRODUCTION_URI = os.environ.get("REDIS_PRODUCTION_URI", "redis://localhost:6379")
     REDIS_LOCAL_URI = os.environ.get("REDIS_LOCAL_URI", "redis://localhost:6379")
 
-    REDIS_URI = REDIS_PRODUCTION_URI
+    REDIS_URL = REDIS_PRODUCTION_URI
 
     # mail config
     MAIL_SERVER = os.environ.get("MAIL_SERVER", "")
@@ -69,3 +69,8 @@ class Development(BaseConfig):
 class Production(BaseConfig):
     DEBUG = False
     FLASK_DEBUG = False
+
+
+
+SMS_API = os.environ.get("SMS_API", "")
+SMS_LINE_NUMBER = os.environ.get("SMS_LINE_NUMBER", "")
