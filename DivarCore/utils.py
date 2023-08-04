@@ -309,13 +309,13 @@ class ArgParser:
         for each in self.__RULES:
             name = each["name"]
             error = each["error"]
-            type = each["type"]
+            Ftype = each["type"]
 
             if not args.get(name, False):
                 return jsonify({"error": error}), HTTP_400_BAD_REQUEST
 
-            if type(args[name]) != type:
-                return jsonify({"error": f"{name} type is incorrect!, valid type is {self.__TYPE_MAPPING[type]}"}), HTTP_400_BAD_REQUEST
+            if type(args[name]) != Ftype:
+                return jsonify({"error": f"{name} type is incorrect!, valid type is {self.__TYPE_MAPPING[Ftype]}"}), HTTP_400_BAD_REQUEST
 
 
     def verify(self, f):

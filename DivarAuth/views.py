@@ -105,11 +105,11 @@ def verify_user_account():
 
 
     try:
-        db.ServerSessionManager.add(new_user)
-        db.ServerSessionManager.commit()
+        db.session.add(new_user)
+        db.session.commit()
     except Exception as e:
         print(e)
-        db.ServerSessionManager.rollback()
+        db.session.rollback()
         return jsonify({"error":"Try again!"}), status.HTTP_400_BAD_REQUEST
     else:
         return jsonify({"message":"User verify Successfully!"}), status.HTTP_200_OK

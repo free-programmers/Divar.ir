@@ -11,7 +11,7 @@ from flask_wtf.csrf import CSRFProtect
 
 
 
-ServerSessionManager = Session()
+session = Session()
 migrate = Migrate()
 db = SQLAlchemy()
 ServerJWTManager = JWTManager()
