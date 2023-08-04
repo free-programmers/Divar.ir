@@ -18,6 +18,15 @@ def json_only(func):
     return wrapper
 
 
+def JsonAnswer(status_code:int, message:dict):
+    """
+    this function return json answer back to user
+    """
+    return jsonify(message), status_code
+
+
+
+
 class TimeStamp:
     """
         a base class for working with time&times in app
@@ -244,11 +253,7 @@ class TimeStamp:
 
 
 class ArgParser:
-    """ an Argument Parser for API routes """
-
-    class InvalidTypeError(ValueError):
-        pass
-
+    """ an Argument(json payload) Parser for API routes """
 
     __RULES = None
     __TYPE_MAPPING={
@@ -268,20 +273,20 @@ class ArgParser:
 
 
     def __init__(self):
-        self.__RULES = []
+        self.__RULES = list()
 
-    def add_rules(self, Fname:str, Ferror:str, Ftype:str=str):
+    def add_rules(self, name:str, error:str, ttype:str):
         """Use this method for adding new rule to arg parser """
-        if not Fname or not Ferror:
+        if not name or not error or not ttype:
             raise ValueError("Some Params are Missing")
 
         temp = {}
-        temp["name"] = Fname
-        temp["error"] = Ferror
-        if Ftype not in self.__TYPES:
-            raise self.InvalidTypeError("Invalid Type are given for parameter type ...")
+        temp["name"] = name
+        temp["error"] = error
+        if ttype not in self.__TYPES:
+            raise ValueError("Invalid Type are given for parameter type ...")
 
-        temp["type"] = Ftype
+        temp["type"] = ttype
         self._add_rules(temp)
 
     def _add_rules(self, val:dict):
@@ -315,7 +320,7 @@ class ArgParser:
                 return jsonify({"error": error}), HTTP_400_BAD_REQUEST
 
             if type(args[name]) != Ftype:
-                return jsonify({"error": f"{name} type is incorrect!, valid type is {self.__TYPE_MAPPING[Ftype]}"}), HTTP_400_BAD_REQUEST
+                return jsonify({"error": f"{name} type is incorrect!, valid type is \\{self.__TYPE_MAPPING[Ftype]}\\".title()}), HTTP_400_BAD_REQUEST
 
 
     def verify(self, f):
@@ -334,7 +339,7 @@ class ArgParser:
         return decorator
 
 
-    def __call__(self, *args, **kwargs):
+    def __call__(self, f, **kwargs):
         """
         Use ArgParser instance as a decorator over Routes
         """

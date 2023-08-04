@@ -8,7 +8,7 @@ import ExtraUtils.constans.http_status_code as status
 from flask_jwt_extended import create_access_token, create_refresh_token
 from flask import request, jsonify
 from DivarAuth import auth
-from DivarCore.utils import json_only, ArgParser
+from DivarCore.utils import json_only, ArgParser, JsonAnswer
 from DivarCore.extenstion import ServerRedis, db, SmsIR
 from DivarAuth.utils import generate_account_verify_token, generate_login_code
 from ExtraUtils.utils import send_sms
@@ -16,11 +16,11 @@ from ExtraUtils.utils import send_sms
 
 
 REGISTER_ARG_PARSER = ArgParser()
-REGISTER_ARG_PARSER.add_rules(Fname="phonenumber", Ferror="Phone number is required")
+REGISTER_ARG_PARSER.add_rules(name="phonenumber", error="Phone number is required", ttype=str)
 
 @auth.route("/api/register/", methods=["POST"])
 @json_only
-@REGISTER_ARG_PARSER.verify
+@REGISTER_ARG_PARSER
 def register_new_user():
     """
         this view take a phone number to register user in app
@@ -53,19 +53,18 @@ def register_new_user():
     send_sms(to=phone, msg=f"کد شما در دیوار {12} می باشد ")
 
     return jsonify({"message": "User Created Successfully", "token": token, "phone":phone}), \
-           status.HTTP_200_OK
-
+           status.HTTP_201_CREATED
 
 
 
 
 VERIFY_USER_ARG_PARSER = ArgParser()
-VERIFY_USER_ARG_PARSER.add_rules(Fname="token", Ferror="token is required")
-VERIFY_USER_ARG_PARSER.add_rules(Fname="phone", Ferror="phone is required")
-VERIFY_USER_ARG_PARSER.add_rules(Fname="code", Ferror="code is required")
+VERIFY_USER_ARG_PARSER.add_rules(name="token", error="token is required", ttype=str)
+VERIFY_USER_ARG_PARSER.add_rules(name="phone", error="phone is required", ttype=str)
+VERIFY_USER_ARG_PARSER.add_rules(name="code", error="code is required", ttype=int)
 @auth.route("/api/verify/", methods=["POST"])
 @json_only
-@VERIFY_USER_ARG_PARSER.verify
+@VERIFY_USER_ARG_PARSER
 def verify_user_account():
     """
         this view take a post request for verify user account
@@ -117,10 +116,10 @@ def verify_user_account():
 
 
 LOGIN_ARG_PARSER = ArgParser()
-LOGIN_ARG_PARSER.add_rules(Fname="phone", Ferror="PhoneNumber is required")
+LOGIN_ARG_PARSER.add_rules(name="phone", error="PhoneNumber is required", ttype=str)
 @auth.route("/api/login/", methods=["POST"])
 @json_only
-@LOGIN_ARG_PARSER.verify
+@LOGIN_ARG_PARSER
 def login_user():
     """
         this view take a post request for login user and if it's correct return jwt token
@@ -159,14 +158,12 @@ def login_user():
 
 
 
-
-
 VERIFY_LOGIN_ARG_PARSER = ArgParser()
-VERIFY_LOGIN_ARG_PARSER.add_rules(Fname="code", Ferror="code is required")
-VERIFY_LOGIN_ARG_PARSER.add_rules(Fname="user_id", Ferror="user_id is required")
+VERIFY_LOGIN_ARG_PARSER.add_rules(name="code", error="code is required", ttype=int)
+VERIFY_LOGIN_ARG_PARSER.add_rules(name="user_id", error="user_id is required", ttype=str)
 @auth.route("/api/login/verify/", methods=["POST"])
 @json_only
-@VERIFY_LOGIN_ARG_PARSER.verify
+@VERIFY_LOGIN_ARG_PARSER
 def verify_login():
     """
         this view verify loginCode that send to user phone and let user login to its account
